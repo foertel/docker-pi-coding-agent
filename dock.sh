@@ -17,11 +17,12 @@ ensure_image() {
 case "$ACTION" in
     start)
         ensure_image
+
+        # if you want to mount rootless docker.sock, add this
+        # -v /var/run/docker.sock:/var/run/docker.sock:ro \
         docker run --rm -d \
             --net host \
             --env-file ~/.pi/.env \
-            # make sure you have rootless docker running
-            # -v /var/run/docker.sock:/var/run/docker.sock:ro \
             -v "$(pwd)":"$(pwd)" \
             -v ~/.pi:/home/$USER_NAME/.pi \
             -w "$(pwd)" \
