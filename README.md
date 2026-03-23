@@ -5,7 +5,7 @@ Run [pi-coding-agent](https://pi.dev/) inside a docker container every time.
 ## How to use
 
 ```bash
-git clone
+git clone https://github.com/foertel/docker-pi-coding-agent.git
 cd ~/projects/yourFolder/somewhere
 ~/docker-pi-coding-setup/dock.sh
 ```
