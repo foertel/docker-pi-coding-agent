@@ -5,7 +5,7 @@ RUN apt update \
     && apt install -y \
         curl \
         jq \
-    && npm install -g @mariozechner/pi-coding-agent \
+    && npm install -g @mariozechner/pi-coding-agent
 
 USER 1000
 
